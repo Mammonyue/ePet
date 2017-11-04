@@ -1,6 +1,7 @@
 <template>
     <div id="header">
-      <div id="title">
+      <div id="titleWrap">
+        <div id="title">
           <div class="t_left">
             <a href="javascript">
               <span class="title1">狗狗站</span>
@@ -9,30 +10,27 @@
               <i></i>
             </a>
           </div>
-          <div class="t_middle">
-            <p class="search-text">
-              <a href="javascript">
-                <input type="text" placeholder="搜索商品和品牌">
-                <span class="serach-icon"></span>
-              </a>
-            </p>
-          </div>
-          <a  class="t_right" href="javascript">
-              <img src="mydope.png" >
-          </a>
+          <p class="search-text">
+            <a href="javascript">
+              <input type="text" placeholder="搜索商品和品牌" disabled="disabled">
+              <span class="serach-icon"></span>
+            </a>
+            <a  class="t_right" href="javascript"></a>
+          </p>
+        </div>
       </div>
-      <div id="headernav">
+
+       <div id="headernav">
         <ul id="headernavLis">
-            <li><a href="javascript"><span class="rela">首页</span></a></li>
-            <li><a href="javascript"><span >服饰城</span></a></li>
-            <li><a href="javascript"><span >狗狗主粮</span></a></li>
-            <li><a href="javascript"><span >医疗保健</span></a></li>
-            <li><a href="javascript"><span >零食玩具</span></a></li>
-            <li><a href="javascript"><span >日用外出</span></a></li>
-            <li><a href="javascript"><span >美容香波</span></a></li>
+            <li><a href="javascript"><span class="rela"><span>首页</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>服饰城</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>狗狗主粮</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>医疗保健</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>零食玩具</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>日用外出</span><i></i></span></a></li>
+            <li><a href="javascript"><span ><span>美容香波</span><i></i></span></a></li>
         </ul>
       </div>
-      <div id="test"></div>
     </div>
 </template>
 

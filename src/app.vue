@@ -7,12 +7,12 @@
 </template>
 
 <script  type="es6">
- /* (function(){
+  (function(){
     var styleNode = document.createElement("style");
-    var width = document.documentElement.clientWidth/10;
+    var width = document.documentElement.clientWidth/20;
     styleNode.innerHTML="html{font-size:"+width+"px!important}";
     document.head.appendChild(styleNode);
-  })();*/
+  })();
 
 
   import header from './components/header/header.vue'
