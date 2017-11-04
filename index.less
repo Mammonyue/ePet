@@ -1,15 +1,14 @@
 @rem: 750/16rem;
 #app{
+  overflow: hidden;
   #header{
     width: 100%;
-    //background: lightblue;
-    /*overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     height: 88px;
-    z-index: 100;*/
+    z-index: 103;
+    background: white;
     #titleWrap{
       padding:5px 10px ;
       box-sizing: border-box;
@@ -131,7 +130,8 @@
     }
   }
   #content{
-   // padding-top:88px;
+    padding-top:88px;
+    padding-bottom: 55px;
     width: 100%;
     .cTimeActi{
       height: 50px;
@@ -179,7 +179,7 @@
           width: 100%;
           height: 160px;
           position: relative;
-          overflow: hidden;
+           overflow: hidden;
           .ban_list{
             height: 100%;
             width: 400%;
@@ -190,44 +190,11 @@
               height: 100%;
               width: 25%;
               float: left;
-              span{
-                width: 100%;
-                height: 100%;
-                display: block;
-              }
-              &:nth-child(1){
-                  span{
-                    background: url("src/components/content/banner_1.jpg");
-                    background-size: 100% 100%;
-                  }
-              }
-              &:nth-child(2){
-                span{
-                  background: url("src/components/content/banner_2.jpg");
-                  background-size: 100% 100%;
-                }
-
-              }
-              &:nth-child(3){
-                span{
-                  background: url("src/components/content/banner_3.jpg");
-                  background-size: 100% 100%;
-                }
-
-              }
-              &:nth-child(4){
-                span{
-                  background: url("src/components/content/banner_4.jpg");
-                  background-size: 100% 100%;
+              a{
+                img{
+                  width: 100%;
                 }
               }
-
-              /*img{
-                width: 100%;
-                height: 100%;
-                display: block;
-
-              }*/
             }
         }
           .ban_navs{
@@ -260,8 +227,9 @@
     .fixBanner{
       height: 288px;
       width: 100%;
-      background: url("src/components/content/fixban.jpg");
-      background-size: 100% 100%;
+      img{
+        width: 100%;
+      }
     }
     .classify{
       height: 175px;
@@ -271,53 +239,20 @@
         display: flex;
         height: 50%;
         width: 100%;
-        &:nth-child(1){
-          div{
-            width:  25%;
-            height: 100%;
-            border-top: 1px solid white;
-            &:nth-child(1){
-              background: url("src/components/content/classify_1.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(2){
-              background: url("src/components/content/classify_2.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(3){
-              background: url("src/components/content/classify_3.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(4){
-              background: url("src/components/content/classify_4.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
+        div{
+          width:  25%;
+          height: 100%;
+          img{
+            width: 100%;
           }
         }
-        &:nth-child(2){
+        &:nth-child(1){
           div{
-            width: 25%;
-            height: 100%;
-            &:nth-child(1){
-              background: url("src/components/content/classify_5.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(2){
-              background: url("src/components/content/classify_6.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(3){
-              background: url("src/components/content/classify_7.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-            &:nth-child(4){
-              background: url("src/components/content/classify_8.jpg") no-repeat;
-              background-size: 100% 100%;
-            }
-          }
+            border-top: 1px solid white;
           }
         }
       }
+    }
     .strategy{
       width: 100%;
       .mBanner1{
@@ -532,13 +467,53 @@
         height: 19px;
         width: 100%;
         padding-bottom: 25px;
-        margin: 0 10px;
         font-size: 12px;
         text-align: center;
+        line-height: 19px;
       }
+    }
+    .fix{
+      background: url('src/components/content/godog.png');
+      width: 41px;
+      height: 46px;
+      background-size: 80px auto;
+      position: fixed;
+      bottom: 15%;
+      right: -1px;
+      z-index: 2;
     }
 
     }
+  #footer{
+    background: #fff;
+    border-top: 1px solid #e7e7e7;
+    height: 45px;
+    line-height: 45px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 103;
+    .clearfix{
+    //  background: pink;
+      height: 55px;
+      li{
+        width: 25%;
+        float: left;
+        height: 100%;
+        text-align: center;
+        a{
+          height: 100%;
+          width: 100%;
+          img{
+            transform: scale(0.5);
+            margin-top: -14px;
+          }
+        }
+
+      }
+    }
+  }
 
 
   }

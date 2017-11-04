@@ -24,23 +24,23 @@
         <ul class="ban_list">
           <li>
             <a href="javascript">
-              <span></span>
+              <img src="./banner_1.jpg" alt="">
               <!--<img src="banner_1.jpg"/>-->
             </a>
           </li>
           <li>
             <a href="javascript">
-              <span></span>
+              <img src="./banner_2.jpg" alt="">
             </a>
           </li>
           <li>
             <a href="javascript">
-              <span></span>
+              <img src="./banner_3.jpg" alt="">
             </a>
           </li>
           <li>
             <a href="javascript">
-              <span></span>
+              <img src="./banner_4.jpg" alt="">
             </a>
           </li>
         </ul>
@@ -52,34 +52,52 @@
         </div>
       </div>
     </div>
-    <div class="fixBanner"></div>
+    <div class="fixBanner">
+      <img src="./fixban.jpg" alt="">
+    </div>
     <div class="classify">
       <div class="rows">
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_1.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_2.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_3.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_4.jpg" alt="">
+          </a>
         </div>
       </div>
       <div class="rows">
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_5.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_6.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_7.jpg" alt="">
+          </a>
         </div>
         <div>
-          <a href="javascript:;"></a>
+          <a href="javascript:;">
+            <img src="./classify_8.jpg" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -178,10 +196,10 @@
       </div>
       <div class="btt">© wap.epet.com 版权：重庆易宠科技有限公司</div>
     </div>
-
+    <div class="fix"></div>
 
     <!--content结束标签  -->
-  </div>
+    </div>
   </div>
 </template>
 
