@@ -107,7 +107,7 @@
               position: relative;
               color: #459d36;
               span{
-                border-bottom: 1px solid ;
+                border-bottom: 2px solid ;
               }
               /*i{
                 position: absolute;
@@ -125,22 +125,44 @@
     }
   }
   #content{
-    .cActivity{
+    width: 100%;
+    .cTimeActi{
       height: 50px;
       width: 100%;
-      background: gray;
+      background: #C11722;
       .cActivity{
         height: 100%;
         width: 100%;;
-        font-size: 13px;
-        //display: flex;
+        display: flex;
+        //line-height: 50px;
         li{
-          float: left;
+          position: relative;
+           width: 33%;
+           float: left;
+           text-align: center;
+           margin-top:3% ;
+           color: #F1BF88;
+           &:nth-child(2){
+             color: white;
+             .mask{
+               color: #F1BF88;
+             }
+           }
+           p{
+             font-size: 15px;
+             font-weight: bold;
+           }
+           span{
+             font-size: 10px;
+           }
+          .mask{
+            position: absolute;
+            right: -6px;
+            top: 4px;
+            transform: scaleY(2);
+            font-weight: 100;
+          }
         }
-       /* &:nth-child(1){
-          flex-grow:1;
-          -webkit-box-flex: 1;
-        }*/
       }
     }
   }
