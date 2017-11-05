@@ -23,23 +23,23 @@
       <div class="ban_wrap">
         <ul class="ban_list">
           <li>
-            <a href="javascript">
+            <a href="javascript:;">
               <img src="./banner_1.jpg" alt="">
               <!--<img src="banner_1.jpg"/>-->
             </a>
           </li>
           <li>
-            <a href="javascript">
+            <a href="javascript:;">
               <img src="./banner_2.jpg" alt="">
             </a>
           </li>
           <li>
-            <a href="javascript">
+            <a href="javascript:;">
               <img src="./banner_3.jpg" alt="">
             </a>
           </li>
           <li>
-            <a href="javascript">
+            <a href="javascript:;">
               <img src="./banner_4.jpg" alt="">
             </a>
           </li>

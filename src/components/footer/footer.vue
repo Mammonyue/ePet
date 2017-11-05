@@ -1,10 +1,10 @@
 <template>
   <div id="footer">
     <ul class="clearfix">
-      <li class="index-a dogon"><a href="javascript:;" class="db"><img src="./footer_1.png" alt=""></a></li>
-      <li class="type-a"><a href="javascript:;" class="db"><img src="./footer_2_2.png" alt=""></a></li>
-      <li class="cart-a"><a href="javascript:;" class="db"><img src="./footer_3_3.png" alt=""></a></li>
-      <li class="myepet-a"><a href="javascript:;" class="db"><img src="./footer_4_4.png" alt=""></a></li>
+      <li class="index-a dogon"><a href="javascript:;" class="db"><img src="./footer_1_1.png" alt=""></a></li>
+      <li class="type-a"><a href="javascript:;" ><img src="./footer_2_2.png" alt=""></a></li>
+      <li class="cart-a"><a href="javascript:;"><img src="./footer_3_3.png" alt=""></a></li>
+      <li class="myepet-a"><a href="javascript:;"><img src="./footer_4_4.png" alt=""></a></li>
     </ul>
   </div>
 </template>
