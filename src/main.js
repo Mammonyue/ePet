@@ -3,6 +3,15 @@
 import Vue from 'vue'
 import app from './app'
 import '../index.less';
+import VueScroller from 'vue-scroller'
+import { Swipe,SwipeItem } from 'mint-ui';
+
+
+Vue.use(VueScroller)
+
+//注册全局组件
+Vue.component(Swipe.name, Swipe)
+Vue.component(SwipeItem.name, SwipeItem);
 
 
 

@@ -1,6 +1,7 @@
 <template>
   <div id="contentWrap">
-  <div id="content">
+    <scroller>
+      <div id="content">
     <div class="cTimeActi">
         <ul class="cActivity" >
           <li>
@@ -21,36 +22,55 @@
     </div>
     <div class="banner">
       <div class="ban_wrap">
-        <ul class="ban_list">
-          <li>
-            <a href="javascript:;">
-              <img src="./banner_1.jpg" alt="">
-              <!--<img src="banner_1.jpg"/>-->
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <img src="./banner_2.jpg" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <img src="./banner_3.jpg" alt="">
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <img src="./banner_4.jpg" alt="">
-            </a>
-          </li>
+        <mt-swipe :auto="1000">
+          <mt-swipe-item><img src="./banner_1.jpg" alt=""></mt-swipe-item>
+          <mt-swipe-item><img src="./banner_2.jpg" alt=""></mt-swipe-item>
+          <mt-swipe-item><img src="./banner_3.jpg" alt=""></mt-swipe-item>
+          <mt-swipe-item><img src="./banner_4.jpg" alt=""></mt-swipe-item>
+        </mt-swipe>
+      </div>
+       <!--<div class="ban_wrap">
+            <ul class="ban_list"  >
+              <mt-swipe :auto="1000">
+                <mt-swipe-item>
+                  <li>
+                    <a href="javascript:;">
+                      <img src="./banner_1.jpg" alt="">
+                    </a>
+                  </li>
+                </mt-swipe-item>
+                <mt-swipe-item>
+                  <li>
+                    <a href="javascript:;">
+                      <img src="./banner_2.jpg" alt="">
+                    </a>
+                  </li>
+                </mt-swipe-item>
+                <mt-swipe-item>
+                  <li>
+                    <a href="javascript:;">
+                      <img src="./banner_3.jpg" alt="">
+                    </a>
+                  </li>
+                  </mt-swipe-item>
+                  <mt-swipe-item>
+                    <li>
+                      <a href="javascript:;">
+                        <img src="./banner_4.jpg" alt="">
+                      </a>
+                    </li>
+                  </mt-swipe-item>
+              </mt-swipe>
         </ul>
-        <div class="ban_navs">
+        &lt;!&ndash;<div class="ban_navs">
           <span class="active"></span>
           <span></span>
           <span></span>
           <span></span>
-        </div>
-      </div>
+        </div>&ndash;&gt;
+      </div>-->
+
+
     </div>
     <div class="fixBanner">
       <img src="./fixban.jpg" alt="">
@@ -200,12 +220,14 @@
 
     <!--content结束标签  -->
     </div>
+    </scroller>
   </div>
 </template>
 
 <script type="es6">
   import goods from '../goods/goods.vue'
   import brand from '../brand/brand.vue'
+
 
 export default {
     components:{

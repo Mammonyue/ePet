@@ -189,6 +189,7 @@
                     "vip": {}
                 }
             ],
+          //more
             "right_image": {
                 "image": "https://img2.epetbar.com/nowater/2017-11/02/09/3b8b4e66523f7e91abe01a2751bbb1d0.png",
                 "img_size": "135x80",
@@ -199,6 +200,7 @@
                     }
                 }
             },
+          //每日疯抢
             "surprise_icon": {
                 "image": "https://static.epetbar.com/static_wap/appmall/main/new_index_icon_suprice.png?version=03",
                 "img_size": "146x33",
