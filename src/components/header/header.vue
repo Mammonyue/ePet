@@ -24,11 +24,13 @@
         </div>
       </div>
 
-       <div id="headernav" ref="scrollWrapper">
+      <div id="headernav" ref="scrollWrapper">
         <ul id="headernavLis">
             <li v-for="(menu, index) in menus" :key="index" :class="{rela:menu.menu_type==1}" @click="clickNav(menu)"><a href="javascript:;"><span><span>{{menu.menu_name}}</span><i></i></span></a></li>
         </ul>
       </div>
+      <div class="fix"></div>
+
     </div>
 </template>
 

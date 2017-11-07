@@ -4,7 +4,7 @@
        <p>《预售抢先购·放价3折起》</p>
        <p>买贵赔十 尾款可享折上折</p>
      </div>
-    <div class="goodslis">
+    <div class="goodslis" >
       <!--<div class="goodsli">
         <img src="./goods1-1.png" alt="">
         <ul class="goodscon">
@@ -98,11 +98,11 @@
           </li>
         </ul>
       </div>-->
-      <img :src="goods[0].value[0].image">
-      <img :src="goods[1].value[0].image">
-      <img :src="goods[2].value[0].image">
-      <img :src="goods[3].value[0].image">
-      <img :src="goods[4].value[0].image">
+      <img :src="img.image"  v-for="img in goods">
+     <!-- <img :src="goods.value2.image" >
+      <img :src="goods.value3.image" >
+      <img :src="goods.value4.image" >
+      <img :src="goods.value5.image" >-->
     </div>
   </div>
 </template>
@@ -119,8 +119,10 @@ export default {
       axios.get('/api2/goods')
         .then(response => {
           const result = response.data
-          this.goods=result.data
-          console.log('goods请求成功！')
+          if(result.code===0) {
+            this.goods=result.data
+            console.log('goods请求成功！')
+          }
         },(response)=>{
           console.log("请再次请求数据")
         })

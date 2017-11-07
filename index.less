@@ -1,4 +1,14 @@
 @rem: 750/16rem;
+
+@keyframes move {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -82*2/@rem;
+  }
+}
+
 html,body{
   height: 100%;
   overflow: hidden;
@@ -14,9 +24,24 @@ html,body{
     height: 88*2/@rem;
     z-index: 103;
     background: white;
+    .fix{
+      background: url('src/components/header/godog.png');
+      width: 41*2/@rem;
+      height: 46*2/@rem;
+      background-size: 80*2/@rem auto;
+      position: fixed;
+      bottom: 15%;
+      right: -1*2/@rem;
+      z-index: 500;
+      animation:steps(2) 2s move infinite;
+
+    }
     #titleWrap{
       padding:5*2/@rem 10*2/@rem ;
       box-sizing: border-box;
+      //background: pink;
+      //新加
+      //margin-top: 2px;
       #title{
         line-height: 26*2/@rem;
         position: relative;
@@ -96,9 +121,11 @@ html,body{
       }
     }
     #headernavLis{
-      width: 525*2/@rem;
-      height: 36*2/@rem;
-      padding-right: 150*2/@rem;
+      width: 600*2/@rem;
+      //改动
+      height: 37*2/@rem;
+      padding-right: 200*2/@rem;
+      background: #fff;
       li{
         float: left;
         width:74*2/@rem ;
@@ -140,6 +167,8 @@ html,body{
     width: 100%;
     //position: relative;
     .cTimeActi{
+      //新加
+      //margin-top: 10px; ;
       height: 50*2/@rem;
       width: 100%;
       background: #C11722;
@@ -308,11 +337,11 @@ html,body{
          .word{
            float: left;
            font-size:10*2/@rem;
-           margin-top: 5*2/@rem;
+           margin-top: 6*2/@rem;
            margin-right: 10*2/@rem;
          }
          .time{
-          float: left;
+           float: left;
            font-size: 13*2/@rem;
            margin-top: 5*2/@rem;
          }
@@ -552,17 +581,7 @@ html,body{
         line-height: 19*2/@rem;
       }
     }
-    .fix{
-      background: url('src/components/content/godog.png');
-      width: 41*2/@rem;
-      height: 46*2/@rem;
-      background-size: 80*2/@rem auto;
-      position: fixed;
-      bottom: 15%;
-      right: -1*2/@rem;
-      z-index: 500;
 
-    }
 
     }
   #footer{

@@ -22,42 +22,42 @@
     </div>
     <div class="banner">
       <div class="ban_wrap">
-        <mt-swipe :auto="1000">
-          <mt-swipe-item>
-            <a :href="datas[0].value[0].target.param">
-              <img :src="datas[0].value[0].image" alt="">
+        <mt-swipe :auto="1000"  >
+          <mt-swipe-item v-if="datas[0]">
+            <a :href="datas[0].value1.param">
+              <img :src="datas[0].value1.image"  >
+            </a>
+          </mt-swipe-item>
+          <mt-swipe-item  v-if="datas[0]">
+            <a :href="datas[0].value2.param" >
+              <img :src="datas[0].value2.image" alt="" >
             </a>
           </mt-swipe-item>
           <mt-swipe-item >
-            <a :href="datas[0].value[1].target.param">
-              <img :src="datas[0].value[1].image" alt="">
+            <a :href="datas[0].value3.param" v-if="datas[0]" >
+              <img :src="datas[0].value3.image" alt="" >
             </a>
           </mt-swipe-item>
           <mt-swipe-item >
-            <a :href="datas[0].value[2].target.param">
-              <img :src="datas[0].value[2].image" alt="">
-            </a>
-          </mt-swipe-item>
-          <mt-swipe-item >
-            <a :href="datas[0].value[3].target.param">
-              <img :src="datas[0].value[3].image" alt="">
+            <a :href="datas[0].value4.param" v-if="datas[0]">
+              <img :src="datas[0].value4.image" alt="" >
             </a>
           </mt-swipe-item>
         </mt-swipe>
       </div>
     </div>
-    <div class="fixBanner">
-      <img :src="datas[1].value[0].image" alt="">
+    <div class="fixBanner" v-if="datas[1]" >
+      <img :src="datas[1].image" alt="">
     </div>
-    <div class="classify">
-      <div class="rows" >
+    <div class="classify" v-if="datas[2]">
+      <div class="rows" v-if="datas[2]">
         <div v-for="img in datas[2].menus1">
           <a :href="img.target.param">
             <img :src="img.image" alt="">
           </a>
         </div>
       </div>
-      <div class="rows" >
+      <div class="rows" v-if="datas[2]">
         <div v-for="img in datas[2].menus2">
           <a :href="img.target.param">
             <img :src="img.image" alt="">
@@ -65,33 +65,33 @@
         </div>
       </div>
     </div>
-    <div class="strategy">
-      <div class="mBanner1">
-        <a :href="datas[3].value[0].target.param">
-          <img :src="datas[3].value[0].image" alt="">
+    <div class="strategy" v-if="datas">
+      <div class="mBanner1" v-if="datas[3]">
+        <a :href="datas[3].param">
+          <img :src="datas[3].image" alt="">
         </a>
       </div>
-      <div class="mBanner2">
-        <a :href="datas[4].value[0].target.param">
-          <img :src="datas[4].value[0].image" alt="">
+      <div class="mBanner2" v-if="datas[4]">
+        <a :href="datas[4].param">
+          <img :src="datas[4].image" alt="">
         </a>
       </div>
     </div>
-    <div class="surprise">
+    <div class="surprise" v-if="sales">
           <div class="surprise-tit ">
             <div class="main">
-              <div class="titimg">
+              <div class="titimg" v-if="sales.surprise_icon">
                 <img :src="sales.surprise_icon.image" />
               </div>
               <div class="word" >距本场结束</div>
-              <div class="time">
+              <div class="time" >
                 <span class="time1-1">00</span>
                 <span class="time-zi">:</span>
                 <span class="time1-1">00</span>
                 <span class="time-zi">:</span>
                 <span class="time1-1">00</span>
               </div>
-              <div class="more">
+              <div class="more" v-if="sales.right_image">
                 <a href="javascript:;" >
                   <img :src="sales.right_image.image" alt="">
                 </a>
@@ -100,10 +100,10 @@
           </div>
           <div class="surprise-pro" >
             <div class="surprise-container"  ref="salesWrapper">
-              <ul class="main" >
-                <li v-for="good in sales.goods">
+              <ul class="main"  v-if="sales">
+                <li v-for="good in sales.goods" >
                   <a href="javascript:;">
-                    <div class="goods-img">
+                    <div class="goods-img" >
                       <img :src="good.image.image" alt="">
                     </div>
                     <div class="money">
@@ -128,7 +128,7 @@
       </div>
       <div class="btt">© wap.epet.com 版权：重庆易宠科技有限公司</div>
     </div>
-    <div class="fix"></div>
+
 
     <!--content结束标签  -->
     </div>
@@ -143,23 +143,32 @@
   import axios from "axios"
 
 export default {
+    data(){
+      return{
+        sales:Object,
+        time:{}
+      }
+    },
     components:{
       goods,
       brand
     },
     props: {
       datas: Array,
-      sales:Object
     },
     mounted(){
       axios.get('/api2/sales')
         .then(response => {
           const result = response.data
-          this.sales=result.data
-          console.log('sales请求成功！')
-          this.$nextTick(()=>{
-            this._initScroll()
-          })
+          if(result.code===0){
+            this.sales=result.data
+            console.log('sales请求成功！')
+
+            this.$nextTick(()=>{
+              this._initScroll()
+            })
+          }
+
         },(response)=>{
           console.log("请再次请求数据")
         })
@@ -172,7 +181,7 @@ export default {
             momentum:true
           })
         }
-      }
+    }
 }
 </script>
 
