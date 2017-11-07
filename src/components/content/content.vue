@@ -23,117 +23,65 @@
     <div class="banner">
       <div class="ban_wrap">
         <mt-swipe :auto="1000">
-          <mt-swipe-item><img src="./banner_1.jpg" alt=""></mt-swipe-item>
-          <mt-swipe-item><img src="./banner_2.jpg" alt=""></mt-swipe-item>
-          <mt-swipe-item><img src="./banner_3.jpg" alt=""></mt-swipe-item>
-          <mt-swipe-item><img src="./banner_4.jpg" alt=""></mt-swipe-item>
+          <mt-swipe-item>
+            <a :href="datas[0].value[0].target.param">
+              <img :src="datas[0].value[0].image" alt="">
+            </a>
+          </mt-swipe-item>
+          <mt-swipe-item >
+            <a :href="datas[0].value[1].target.param">
+              <img :src="datas[0].value[1].image" alt="">
+            </a>
+          </mt-swipe-item>
+          <mt-swipe-item >
+            <a :href="datas[0].value[2].target.param">
+              <img :src="datas[0].value[2].image" alt="">
+            </a>
+          </mt-swipe-item>
+          <mt-swipe-item >
+            <a :href="datas[0].value[3].target.param">
+              <img :src="datas[0].value[3].image" alt="">
+            </a>
+          </mt-swipe-item>
         </mt-swipe>
       </div>
-       <!--<div class="ban_wrap">
-            <ul class="ban_list"  >
-              <mt-swipe :auto="1000">
-                <mt-swipe-item>
-                  <li>
-                    <a href="javascript:;">
-                      <img src="./banner_1.jpg" alt="">
-                    </a>
-                  </li>
-                </mt-swipe-item>
-                <mt-swipe-item>
-                  <li>
-                    <a href="javascript:;">
-                      <img src="./banner_2.jpg" alt="">
-                    </a>
-                  </li>
-                </mt-swipe-item>
-                <mt-swipe-item>
-                  <li>
-                    <a href="javascript:;">
-                      <img src="./banner_3.jpg" alt="">
-                    </a>
-                  </li>
-                  </mt-swipe-item>
-                  <mt-swipe-item>
-                    <li>
-                      <a href="javascript:;">
-                        <img src="./banner_4.jpg" alt="">
-                      </a>
-                    </li>
-                  </mt-swipe-item>
-              </mt-swipe>
-        </ul>
-        &lt;!&ndash;<div class="ban_navs">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>&ndash;&gt;
-      </div>-->
-
-
     </div>
     <div class="fixBanner">
-      <img src="./fixban.jpg" alt="">
+      <img :src="datas[1].value[0].image" alt="">
     </div>
     <div class="classify">
-      <div class="rows">
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_1.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_2.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_3.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_4.jpg" alt="">
+      <div class="rows" >
+        <div v-for="img in datas[2].menus1">
+          <a :href="img.target.param">
+            <img :src="img.image" alt="">
           </a>
         </div>
       </div>
-      <div class="rows">
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_5.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_6.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_7.jpg" alt="">
-          </a>
-        </div>
-        <div>
-          <a href="javascript:;">
-            <img src="./classify_8.jpg" alt="">
+      <div class="rows" >
+        <div v-for="img in datas[2].menus2">
+          <a :href="img.target.param">
+            <img :src="img.image" alt="">
           </a>
         </div>
       </div>
     </div>
     <div class="strategy">
       <div class="mBanner1">
-        <img src="./Mbanner1.jpg" alt="">
+        <a :href="datas[3].value[0].target.param">
+          <img :src="datas[3].value[0].image" alt="">
+        </a>
       </div>
       <div class="mBanner2">
-        <img src="./Mbanner2.jpg" alt="">
+        <a :href="datas[4].value[0].target.param">
+          <img :src="datas[4].value[0].image" alt="">
+        </a>
       </div>
     </div>
     <div class="surprise">
           <div class="surprise-tit ">
             <div class="main">
               <div class="titimg">
-                <img src="./suprice.png">
+                <img :src="sales.surprise_icon.image" />
               </div>
               <div class="word" >距本场结束</div>
               <div class="time">
@@ -145,68 +93,32 @@
               </div>
               <div class="more">
                 <a href="javascript:;" >
-                  <img src="./more.png">
+                  <img :src="sales.right_image.image" alt="">
                 </a>
               </div>
             </div>
           </div>
-          <div class="surprise-pro">
-            <div class="surprise-container surprise-scroll">
-              <ul class="main">
-                <li>
+          <div class="surprise-pro" >
+            <div class="surprise-container"  ref="salesWrapper">
+              <ul class="main" >
+                <li v-for="good in sales.goods">
                   <a href="javascript:;">
                     <div class="goods-img">
-                      <img src="./surprise_1.jpg" alt="">
+                      <img :src="good.image.image" alt="">
                     </div>
                     <div class="money">
                       <span>¥</span>
-                      <span>5.50</span>
-                      <p >省￥49.50</p>
+                      <span>{{good.sale_price}}</span>
+                      <p >{{good.little_price}}</p>
                       </div>
                     </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="goods-img">
-                      <img src="./surprise_2.jpg" alt="">
-                    </div>
-                    <div class="money">
-                      <span>¥</span>
-                      <span>5.50</span>
-                      <p >省￥49.50</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="goods-img">
-                      <img src="./surprise_3.jpg" alt="">
-                    </div>
-                    <div class="money">
-                      <span>¥</span>
-                      <span>5.50</span>
-                      <p >省￥49.50</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;">
-                    <div class="goods-img">
-                      <img src="./surprise_4.jpg" alt="">
-                    </div>
-                    <div class="money">
-                      <span>¥</span>
-                      <span>5.50</span>
-                      <p >省￥49.50</p>
-                    </div>
-                  </a>
                 </li>
               </ul>
             </div>
           </div>
     </div>
-    <goods></goods>
-    <brand></brand>
+    <goods ></goods>
+    <brand :datas="datas" ></brand>
     <div class="bottom">
       <div class="bottomM">
         <span class="bt" title="触屏版">触屏版</span>
@@ -227,13 +139,40 @@
 <script type="es6">
   import goods from '../goods/goods.vue'
   import brand from '../brand/brand.vue'
-
+  import BScroll from 'better-scroll'
+  import axios from "axios"
 
 export default {
     components:{
       goods,
       brand
-    }
+    },
+    props: {
+      datas: Array,
+      sales:Object
+    },
+    mounted(){
+      axios.get('/api2/sales')
+        .then(response => {
+          const result = response.data
+          this.sales=result.data
+          console.log('sales请求成功！')
+          this.$nextTick(()=>{
+            this._initScroll()
+          })
+        },(response)=>{
+          console.log("请再次请求数据")
+        })
+    },
+      methods:{
+        _initScroll(){
+          new BScroll(this.$refs.salesWrapper,{
+            scrollX: true,
+            click: true,
+            momentum:true
+          })
+        }
+      }
 }
 </script>
 

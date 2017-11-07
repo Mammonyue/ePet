@@ -7,9 +7,11 @@
       <li class="myepet-a"><a href="javascript:;"><img src="./footer_4_4.png" alt=""></a></li>
     </ul>
   </div>
+
 </template>
 
 <script type="es6">
+
 export default {}
 </script>
 

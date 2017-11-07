@@ -21,7 +21,43 @@ const autoOpenBrowser = !!config.dev.autoOpenBrowser
 // https://github.com/chimurai/http-proxy-middleware
 const proxyTable = config.dev.proxyTable
 
+
+
 const app = express()
+
+//加载模拟的json数据
+var mockData =require('../src/mock/data.json')
+
+//得到路由器
+var router =express.Router()
+// 使用路由器注册路由
+router.get('/menus', function (req, res, next) {
+  res.send({
+    code: 0, // 标识当前数据是一个正确的数据
+    data: mockData.menus
+  })
+})
+router.get('/datas', function (req, res, next) {
+  res.send({
+    code: 0, // 标识当前数据是一个正确的数据
+    data: mockData.datas
+  })
+})
+router.get('/goods', function (req, res, next) {
+  res.send({
+    code: 0, // 标识当前数据是一个正确的数据
+    data: mockData.goods
+  })
+})
+// http://localhost:8080/api/seller
+// 启动路由器
+app.use('/api', router)
+
+
+
+
+
+
 const compiler = webpack(webpackConfig)
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {

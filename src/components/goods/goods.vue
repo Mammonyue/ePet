@@ -5,7 +5,7 @@
        <p>买贵赔十 尾款可享折上折</p>
      </div>
     <div class="goodslis">
-      <div class="goodsli">
+      <!--<div class="goodsli">
         <img src="./goods1-1.png" alt="">
         <ul class="goodscon">
           <li>
@@ -97,17 +97,35 @@
             <span class="nowPrice">￥174.0</span><span class="oldPrice">￥218.0</span>
           </li>
         </ul>
-      </div>
-      <img src="./goods_1.jpg">
-      <img src="./goods_2.jpg">
-      <img src="./goods_3.jpg">
-      <img src="./goods_4.jpg">
+      </div>-->
+      <img :src="goods[0].value[0].image">
+      <img :src="goods[1].value[0].image">
+      <img :src="goods[2].value[0].image">
+      <img :src="goods[3].value[0].image">
+      <img :src="goods[4].value[0].image">
     </div>
   </div>
 </template>
 
 <script type="es6">
-export default {}
+  import axios from 'axios'
+export default {
+    data(){
+      return{
+        goods:Array
+      }
+    },
+    mounted(){
+      axios.get('/api2/goods')
+        .then(response => {
+          const result = response.data
+          this.goods=result.data
+          console.log('goods请求成功！')
+        },(response)=>{
+          console.log("请再次请求数据")
+        })
+    }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

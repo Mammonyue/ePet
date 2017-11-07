@@ -5,9 +5,13 @@ import app from './app'
 import '../index.less';
 import VueScroller from 'vue-scroller'
 import { Swipe,SwipeItem } from 'mint-ui';
+import VueResource from 'vue-resource'
 
-
+//声明使用插件
+Vue.use(VueResource)
 Vue.use(VueScroller)
+
+import './mock/mockServer'
 
 //注册全局组件
 Vue.component(Swipe.name, Swipe)

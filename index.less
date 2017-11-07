@@ -98,11 +98,21 @@ html,body{
     #headernavLis{
       width: 525*2/@rem;
       height: 36*2/@rem;
+      padding-right: 150*2/@rem;
       li{
         float: left;
         width:74*2/@rem ;
         height:36*2/@rem;
         text-align: center;
+        &.rela{
+         span{
+           position: relative;
+           color: #459d36;
+           span{
+             border-bottom: 2*2/@rem solid ;
+           }
+         }
+        }
         a{
           height: 56*2/@rem;
           line-height: 36*2/@rem;
@@ -111,13 +121,13 @@ html,body{
             display: inline-block;
             height: 36*2/@rem;
             box-sizing: border-box;
-            &.rela{
+            /*&.rela{
               position: relative;
               color: #459d36;
               span{
                 border-bottom: 2*2/@rem solid ;
               }
-            }
+            }*/
           }
         }
       }
@@ -128,6 +138,7 @@ html,body{
     padding-top: 88*2/@rem;
     padding-bottom: 55*2/@rem;
     width: 100%;
+    //position: relative;
     .cTimeActi{
       height: 50*2/@rem;
       width: 100%;
@@ -236,21 +247,26 @@ html,body{
     .classify{
       height: 175*2/@rem;
       width: 100%;
+      &:nth-child(1){
+        div{
+          border-top: 1*2/@rem solid white;
+        }
+      }
       .rows{
         display: -webkit-box;
         display: flex;
         height: 50%;
         width: 100%;
-        div{
-          width:  25%;
-          height: 100%;
-          img{
-            width: 100%;
-          }
-        }
         &:nth-child(1){
           div{
             border-top: 1*2/@rem solid white;
+          }
+        }
+        div{
+          width:  50%;
+          height: 100%;
+          img{
+            width: 100%;
           }
         }
       }
@@ -281,16 +297,17 @@ html,body{
         //background: pink;
         .titimg{
             height: 24*2/@rem;
-            width: 105*2/@rem;
+            width: 100*2/@rem;
             float: left;
-            margin-left: -20*2/@rem;
+            margin-left: -4*2/@rem;
+            margin-right: 5*2/@rem;
             img{
               width: 100%;
             }
           }
          .word{
            float: left;
-           font-size: 13*2/@rem;
+           font-size:10*2/@rem;
            margin-top: 5*2/@rem;
            margin-right: 10*2/@rem;
          }
@@ -319,8 +336,9 @@ html,body{
           height: 100%;
           width: 100%;
           overflow: hidden;
+          margin-top: -8/@rem;
           .main{
-            width: 120%;
+            width: 350%;
             li{
               width: 98*2/@rem;
               height: 100%;
@@ -447,13 +465,18 @@ html,body{
       }
       .brandlis{
         .divboximg{
+          background:#F24865;
+          width: 100%;
           .divboximgTop{
+            height: 210*2/@rem;
+            width: 100%;
             display: -webkit-box;
             display: flex;
             .divimg{
               width: 25%;
               -webkit-box-flex:1;
               flex-grow:1 ;
+              //float: left;
               img{
                 width: 100%;
               }
@@ -485,15 +508,26 @@ html,body{
         }
       }
       .videodiv{
+        height: 470/@rem;
+        width: 100%;
+        position: relative;
         img{
           width: 100%;
         }
-        .grounding{
-          height: 35*2/@rem;
-          width: 100%;
-          background:#F24865 ;
+        .videobox{
+          video{
+            position: absolute;
+            top:0;
+            left: 0;
+          }
         }
       }
+      .grounding{
+        img{
+          width: 100%;
+        }
+      }
+
     }
     .bottom{
       .bottomM{
