@@ -6,7 +6,6 @@ import VueRouter from 'vue-router'
  import shoppingcart from '../components/shoppingcart/shoppingcart.vue'
  import mypet  from '../components/mypet/mypet.vue'
  import content from '../components/content/content.vue'
-
 // 声明使用插件
 Vue.use(VueRouter)
 

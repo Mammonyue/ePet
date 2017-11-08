@@ -1,11 +1,13 @@
 <template>
   <div id="sortWrap">
-    <div class="sortHeader">
-      <a href="javascript:;"><span class="cur" @click="">分类</span></a>
-      <a href="javascript:;"><span>品牌</span></a>
+      <div class="sortHeader">
+        <a href="javascript:;"><span class="cur" @click="">分类</span></a>
+        <a href="javascript:;"><span>品牌</span></a>
       <img src="./search.png" alt="">
-    </div>
+      </div>
+
     <div class="twoWrap">
+      <!-- 左侧内容-->
       <div class="sortMenu">
         <div class="menu-wrapper" ref="menuWrapper">
           <ul>
@@ -51,7 +53,7 @@
           </ul>
         </div>
       </div>
-        <!--右侧内容-->
+      <!--右侧内容-->
       <div class="sort-content">
         <div class="hot-title" ref="contentWrapper">
           <a href="javascript:;" class="title">热门分类</a>
@@ -124,17 +126,13 @@
         </div>
       </div>
     </div>
-
-
-
-
   </div>
 
 
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+   import BScroll from 'better-scroll'
   export default{
     mounted(){
       this.$nextTick(()=>{

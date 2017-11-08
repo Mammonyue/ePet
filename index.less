@@ -585,32 +585,47 @@ html,body{
 
     }
   #footer{
-    //background: #fff;
+    background: #fff;
     border-top: 1*2/@rem solid #e7e7e7;
-    height: 45*2/@rem;
-    line-height: 45*2/@rem;
+    height: 55*2/@rem;
+    line-height: 55*2/@rem;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 103;
-    background: pink;
-    .ul{
-      height: 55*2/@rem;
-      width: 100%;
+    text-align: center;
+    a{
+      height: 51*2/@rem;
+      width: 49*2/@rem;
+      display: inline-block;
       background: pink;
-      li{
-        height: 55*2/@rem;
-        width: 88*2/@rem;
-        text-align: center;
-        a{
-          background: red;
-          display: inline-block;
-         // width: 25%;
-          height: 42*2/@rem;
-          width: 40*2/@rem;
+      background: url("./src/components/footer/img.png");
+      background-size: 610% 400%;
+      margin: 2*2/@rem 15*2/@rem 0;
+      &:nth-child(1){
+        background-position: -100*2/@rem 0;
+        &.cur{
+          background-position: 0 0 ;
         }
-
+      }
+      &:nth-child(2){
+        background-position: -110*2/@rem -51*2/@rem;
+        &.cur{
+          background-position:0 -50*2/@rem ;
+        }
+      }
+      &:nth-child(3){
+        background-position: -110*2/@rem -101*2/@rem;
+         &.cur{
+           background-position:0 -101*2/@rem ;
+         }
+      }
+      &:nth-child(4){
+        background-position: -110*2/@rem -153*2/@rem;
+         &.cur{
+           background-position:0 -154*2/@rem ;
+         }
       }
     }
 
@@ -627,7 +642,7 @@ html,body{
       height :40*2/@rem;
       padding :0 15*2/@rem;
       line-height: 40*2/@rem;
-      border-bottom: 1px lightgray solid;
+      border-bottom: 1*2/@rem lightgray solid;
       text-align: center;
       background: #fff;
       a{
@@ -660,7 +675,7 @@ html,body{
       display: flex;
       .sortMenu{
         padding-top: 40*2/@rem;
-        height: 600px;
+        height: 600*2/@rem;
         .menu-wrapper{
           height: 100%;
           ul{
@@ -683,7 +698,7 @@ html,body{
         }
       }
       .sort-content{
-        margin-left: 1px;
+        margin-left: 1*2/@rem;
         flex: 1;
         border-top: 1*2/@rem solid #f3f4f5;
         padding: 55*2/@rem 5*2/@rem 20*2/@rem 5*2/@rem;
@@ -711,7 +726,7 @@ html,body{
               p{
                 text-align: center;
                 margin-top: 10*2/@rem;
-                height: 20px;
+                height: 20*2/@rem;
                 font-size: 12px;
                 color: #333;
               }
@@ -725,6 +740,98 @@ html,body{
     }
 
 
+  }
+  #shopingcart{
+    width: 100%;
+    .cartHeader{
+      width:90%;
+      height: 50*2/@rem;
+      line-height: 50*2/@rem;
+      position: relative;
+      padding: 0 1em;
+      border-bottom: 1px solid lightgray;
+      .main{
+        background: url("./src/components/shoppingcart/personal-bico1.png") no-repeat ;
+        background-size: 9*2/@rem 17*2/@rem;
+        width: 22*2/@rem;
+        height: 20*2/@rem;
+        line-height: 20*2/@rem;
+        position: absolute;
+        margin-top: 17*2/@rem;
+        padding: 0 10*2/@rem;
+      }
+      .word{
+        width: 90%;
+        display: inline-block;
+        text-align: center;
+        color:#333;
+        font-size: 20px;
+        margin-left: 10*2/@rem;
+      }
+      .bun{
+        height: 20*2/@rem;
+        width: 40*2/@rem;
+        display: inline-block;
+        position: absolute;
+        top: 1%;
+        right:10%;
+        margin-left: -10*2/@rem;
+        color:#333;
+        font-size: 15px;
+      }
+      .icon{
+          display: inline-block;
+          height: 20*2/@rem;
+          width: 20*2/@rem ;
+          background: url(./src/components/shoppingcart/imgtk-new.png) no-repeat;
+          background-size: 20*2/@rem 20*2/@rem;
+          position: absolute;
+          top: 30%;
+          right: 5%;
+      }
+    }
+    .endPrice{
+      border-top: 1px solid lightgray;
+      height: 40*2/@rem;
+      width: 100%;
+      padding: 10*2/@rem 0;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 150;
+      line-height: 40*2/@rem;
+      span{
+        width: 20*2/@rem;
+        height: 20*2/@rem;
+        float: left;
+        margin-left: 10*2/@rem;
+        margin-top: 2*2/@rem;
+        img{
+          width: 100%;
+        }
+      }
+      p{
+        float: left;
+        margin-left: 10*2/@rem;
+        font-size: 14px;
+        color: #666;
+      }
+      div{
+        float: right;
+        line-height: 35px;
+        height: 35px;
+        width: 96px;
+        text-align: center;
+        border-radius: 10%;
+        font-size: 14px ;
+        color: #fff;
+        background: #BDBDBD;
+        margin-top: 3px;
+        margin-right: 5*2/@rem;
+      }
+
+    }
   }
 }
 

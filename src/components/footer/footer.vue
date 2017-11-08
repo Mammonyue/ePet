@@ -1,13 +1,9 @@
 <template>
    <div id="footer">
-     <ul>
-       <li>
-         <router-link to="/content" ></router-link>
-         <router-link to="/sort"></router-link>
-         <router-link to="/shoppingcart"></router-link>
-         <router-link to="mypet"></router-link>
-       </li>
-     </ul>
+     <router-link to="/content"  class="cur"></router-link>
+     <router-link to="/sort"  ></router-link>
+     <router-link to="/shoppingcart" ></router-link>
+     <router-link to="mypet" ></router-link>
   </div>
 </template>
 
