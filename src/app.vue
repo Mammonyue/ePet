@@ -1,18 +1,14 @@
 <template>
   <div id="app">
-      <my-header></my-header>
-      <my-content :datas="datas"></my-content>
+      <!--<my-content :datas="datas"></my-content>-->
+      <router-view :datas="datas"></router-view>
       <my-footer :datas="datas"></my-footer>
   </div>
 </template>
 <script  type="es6">
-
-
-
   import header from './components/header/header.vue'
   import content from './components/content/content.vue'
   import footer from './components/footer/footer.vue'
-
 
   import axios from "axios"
 
@@ -44,6 +40,7 @@
 }
 </script>
 
-<style>
+<style  >
+
 
 </style>

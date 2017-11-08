@@ -1,5 +1,6 @@
 <template>
   <div id="contentWrap">
+    <my-header></my-header>
     <scroller>
       <div id="content">
     <div class="cTimeActi">
@@ -141,6 +142,7 @@
   import brand from '../brand/brand.vue'
   import BScroll from 'better-scroll'
   import axios from "axios"
+  import header from '../header/header.vue'
 
 export default {
     data(){
@@ -151,7 +153,8 @@ export default {
     },
     components:{
       goods,
-      brand
+      brand,
+      'my-header': header,
     },
     props: {
       datas: Array,

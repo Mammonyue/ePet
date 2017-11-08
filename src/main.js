@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import app from './app'
+import router from './router'
 import '../index.less';
 import VueScroller from 'vue-scroller'
 import { Swipe,SwipeItem } from 'mint-ui';
@@ -23,4 +24,5 @@ Vue.component(SwipeItem.name, SwipeItem);
 new Vue({
   el: '#app',
   render: h => h(app),
+  router
 })
