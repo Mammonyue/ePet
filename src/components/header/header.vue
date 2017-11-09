@@ -30,7 +30,12 @@
         </ul>
       </div>
       <div class="fix"></div>
+      <!--点击狗狗-->
+      <div class="mask">
+        <div class="mask-wrapper">
 
+        </div>
+      </div>
     </div>
 </template>
 

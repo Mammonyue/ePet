@@ -36,6 +36,18 @@ html,body{
       animation:steps(2) 2s move infinite;
 
     }
+    .mask{
+     /* position :fixed;
+      z-index :10000;
+      left :0;
+      top :0;
+      width :100%;
+      height :100%;
+      background: #fff;
+      padding-bottom: 43*2/@rem;
+      box-sizing: border-box;
+      overflow :auto*/
+    }
     #titleWrap{
       padding:5*2/@rem 10*2/@rem ;
       box-sizing: border-box;
@@ -590,7 +602,7 @@ html,body{
     height: 55*2/@rem;
     line-height: 55*2/@rem;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     z-index: 103;
@@ -604,32 +616,31 @@ html,body{
       background-size: 610% 400%;
       margin: 2*2/@rem 15*2/@rem 0;
       &:nth-child(1){
-        background-position: -100*2/@rem 0;
-        &.cur{
+        background-position: -105*2/@rem 0;
+        &.active {
           background-position: 0 0 ;
         }
       }
       &:nth-child(2){
         background-position: -110*2/@rem -51*2/@rem;
-        &.cur{
+        &.active{
           background-position:0 -50*2/@rem ;
         }
       }
       &:nth-child(3){
         background-position: -110*2/@rem -101*2/@rem;
-         &.cur{
+         &.active{
            background-position:0 -101*2/@rem ;
          }
       }
       &:nth-child(4){
         background-position: -110*2/@rem -153*2/@rem;
-         &.cur{
+         &.active{
            background-position:0 -154*2/@rem ;
          }
       }
     }
 
-    //footer结尾
   }
   #sortWrap{
     position: relative;
@@ -681,9 +692,13 @@ html,body{
           ul{
             height: 130%;
             li{
-              &.on{
-                background: #f3f4f5;
-                color: #ed4044;
+              span{
+                a{
+                  &.active{
+                    background: #f3f4f5;
+                    color: #ed4044;
+                  }
+                }
               }
               padding: 15*2/@rem 0;
               border-bottom: 1*2/@rem solid #f3f4f5;

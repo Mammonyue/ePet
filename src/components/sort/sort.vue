@@ -11,44 +11,44 @@
       <div class="sortMenu">
         <div class="menu-wrapper" ref="menuWrapper">
           <ul>
-            <li class="on"  >
-              <span class="text border-1px">为您推荐</span>
+            <li >
+              <span ><a href="javascript:;">为您推荐</a></span>
             </li>
             <li >
-              <span class="text border-1px">狗狗主粮</span>
+              <span >狗狗主粮</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗零食</span>
+              <span >狗狗零食</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗服饰</span>
+              <span >狗狗服饰</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗窝垫</span>
+              <span >狗狗窝垫</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗生活</span>
+              <span >狗狗生活</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗玩具</span>
+              <span >狗狗玩具</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗保健</span>
+              <span >狗狗保健</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗医疗</span>
+              <span >狗狗医疗</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗牵引</span>
+              <span >狗狗牵引</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗美容</span>
+              <span >狗狗美容</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗周边</span>
+              <span >狗狗周边</span>
             </li>
             <li >
-              <span class="text border-1px">狗狗清洁</span>
+              <span >狗狗清洁</span>
             </li>
           </ul>
         </div>
